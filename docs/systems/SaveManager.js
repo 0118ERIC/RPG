@@ -1,0 +1,1 @@
+export default class SaveManager{ constructor(key='web-rpg-save-v1'){ this.key=key; } save(data){ localStorage.setItem(this.key, JSON.stringify(data)); } load(){ try{ return JSON.parse(localStorage.getItem(this.key)); }catch(e){ return null; } } clear(){ localStorage.removeItem(this.key); } }

@@ -1,0 +1,13 @@
+{
+  "sword_fire": {
+    "name": "火焰短劍",
+    "type": "weapon",
+    "atk": 5,
+    "elem": "fire"
+  },
+  "shield_wood": {
+    "name": "木盾",
+    "type": "shield",
+    "def": 3
+  }
+}

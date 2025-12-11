@@ -1,0 +1,83 @@
+{
+  "npc_blacksmith": {
+    "nodes": {
+      "start": {
+        "text": "鐵匠：嗨，旅行者！需要打磨武器或來場切磋？",
+        "choices": [
+          {
+            "label": "你好！",
+            "next": "greet",
+            "effects": {
+              "relations": {
+                "blacksmith": 1
+              }
+            }
+          },
+          {
+            "label": "想跟你比試一下",
+            "next": "fight",
+            "effects": {
+              "flags": {
+                "startBattle": true
+              }
+            }
+          }
+        ]
+      },
+      "greet": {
+        "text": "鐵匠：有禮貌的客人我最喜歡。",
+        "choices": [
+          {
+            "label": "有推薦的裝備？",
+            "next": "offer"
+          },
+          {
+            "label": "先不需要",
+            "next": "end"
+          }
+        ]
+      },
+      "offer": {
+        "text": "鐵匠：這把火焰短劍只要 50 金幣！",
+        "choices": [
+          {
+            "label": "太貴了…",
+            "next": "end"
+          },
+          {
+            "label": "直接買",
+            "next": "buy"
+          }
+        ]
+      },
+      "buy": {
+        "text": "你取得【火焰短劍】！攻擊+5，元素：火。",
+        "choices": [
+          {
+            "label": "謝謝！",
+            "next": "end"
+          }
+        ],
+        "effects": {
+          "items": [
+            "sword_fire"
+          ],
+          "relations": {
+            "blacksmith": 1
+          },
+          "flags": {
+            "hasFireSword": true
+          }
+        }
+      },
+      "fight": {
+        "text": "鐵匠：好！讓我看看你的身手！",
+        "choices": []
+      },
+      "end": {
+        "text": "鐵匠：有需要再來找我。",
+        "choices": []
+      }
+    }
+  }
+}
